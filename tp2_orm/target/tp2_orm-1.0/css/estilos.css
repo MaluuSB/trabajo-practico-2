@@ -1,0 +1,97 @@
+/* Variables de colores */
+:root {
+    --color-fondo: #F0EAD2;
+    --color-header: #6C584C;
+    --color-letras: #FFF;
+    --color-enlace: #ADC178;
+    --color-enlace-hover: #A98467;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.usuario { 
+    background-color: #97b970; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+}
+
+.usuario p { 
+    color: #FFF; 
+    margin: 0; 
+}
+
+header {
+    background-color: var(--color-header);
+    color: var(--color-fondo);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cerrar-sesion-btn {
+    background-color: #A98467;
+    color: var(--color-letras);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cerrar-sesion-btn:hover {
+    background-color: #ADC178;
+}
+
+.contenedor-padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.contenedor { 
+    text-align: center; 
+    background-color: #A98467; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 20px auto; 
+    max-width: 500px; 
+}
+
+.contenedor p{
+    color: #FFF;
+}
+
+h2 {
+    color: #6C584C;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ver-lista-btn {
+    background-color: #97b970;
+    color: var(--color-letras);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.ver-lista-btn:hover {
+    background-color: #DDE5B6;
+    transition: background-color 0.3s;
+}

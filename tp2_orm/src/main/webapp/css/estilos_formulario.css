@@ -1,0 +1,104 @@
+/* Variables de colores */
+:root {
+    --color-fondo: #F0EAD2;
+    --color-h1: #6C584C;
+    --color-form: #ADC178;
+    --color-borde: #A98467;
+    --color-data-box: #DDE5B6;
+    --color-enlace: #A98467;
+    --color-enlace-hover: #6C584C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--color-h1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    background-color: var(--color-form);
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: var(--color-data-box);
+    outline: none;
+}
+
+input {
+    border: 1px solid var(--color-borde);
+}
+.error-input{
+    border: 5px solid red;
+}
+.exito-input{
+    border: 5px solid green;
+}
+.mostrar-p{
+    display: block;
+}
+.ocultar-p{
+    display: none;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-data-box);
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--color-enlace);
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-enlace-hover);
+    transition: background-color 0.3s;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.button-container a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-enlace);
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-container a:hover {
+    background-color: var(--color-enlace-hover);
+    transition: background-color 0.3s;
+}
+

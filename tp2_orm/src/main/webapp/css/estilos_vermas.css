@@ -1,0 +1,65 @@
+:root {
+    --color-fondo: #F0EAD2;
+    --color-letras: #6C584C;
+    --color-data: #ADC178;
+    --color-data-box: #DDE5B6;
+    --color-enlace: #A98467;
+    --color-enlace-hover: #6C584C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-letras);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contenedor_vermas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.left-data, .right-data {
+    width: 45%;
+    background-color: var(--color-data);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-box {
+    background-color: var(--color-data-box);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-container_vermas {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.button-container_vermas a {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-enlace);
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-container_vermas a:hover {
+    background-color: var(--color-enlace-hover);
+    transition: background-color 0.3s;
+}

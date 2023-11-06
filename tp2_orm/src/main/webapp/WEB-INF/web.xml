@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+   version="4.0">
+    
+   <display-name>activeweb</display-name>
+    
+    <!--
+        FILTER (4 importantes configuraciones)
+        indicar filter: dispatcher proviene de org.javalite
+        
+        encoding: es el encoding que setea a las request y response HTTP. UTF-8 resuelve problemas de internalizacion.
+        
+        exclusion: elementos separados por comas, de cadenas en la URI la cuel el framework ignorara(no intenta procesar los request a controladores) son archivos estaticos.
+        
+        root_controler: nombre del controlador que se llamara automaticamente si no se indica un path en la URL, con la accion default index.
+    -->
+    <filter>
+        <filter-name>dispatcher</filter-name>
+        <filter-class>org.javalite.activeweb.RequestDispatcher</filter-class>
+        
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>exclusions</param-name>
+            <param-value>css,images,js,html,ico,png</param-value>
+        </init-param>
+        <init-param>
+            <param-name>root_controller</param-name>
+            <param-value>home</param-value>
+        </init-param>
+    </filter>
+    
+    <!--
+        indica que para cualquier patron de la URL va a utilizar el dispatcher que configuramos arriba.
+    -->
+    <filter-mapping>
+        <filter-name>dispatcher</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    
+    <!--ACA ABAJO VAN A IR LAS SEGURIDADES A CIERTOS CONTROLADORES-->
+    
+    <!--Restriccion total a la aplicacion, debe logearse-->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>WebContraint</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        
+        <auth-constraint>
+            <role-name>ver</role-name>
+        </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Public Resources</web-resource-name>
+            <url-pattern>/css/*</url-pattern>
+            <url-pattern>/js/*</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
+    
+    <!-- HACIA QUE RECURSO LOGIN VAMOS A REDIGIR -->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>login</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+</web-app>

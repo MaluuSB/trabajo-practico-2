@@ -1,0 +1,63 @@
+:root {
+    --color-fondo: #F0EAD2;
+    --color-letras: #6C584C;
+    --color-form: #ADC178;
+    --color-borde: #A98467;
+    --color-input: #DDE5B6;
+    --color-button: #A98467;
+    --color-button-hover: #6C584C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    color: var(--color-letras);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color-form);
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+}
+
+/* Estilos para los elementos del formulario */
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-input);
+    border-radius: 3px;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--color-button);
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--color-button-hover);
+    transition: background-color 0.3s;
+}
+

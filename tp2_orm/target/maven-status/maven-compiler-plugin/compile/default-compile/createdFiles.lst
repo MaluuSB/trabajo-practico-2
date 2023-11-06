@@ -1,0 +1,11 @@
+app/models/Usuario.class
+app/config/AppControllerConfig.class
+app/config/DbConfig.class
+app/config/FreeMarkerConfig.class
+app/config/RouteConfig.class
+app/controllers/UsuarioController.class
+udc/edu/ar/tp2_orm/JakartaRestConfiguration.class
+app/config/AppBootstrap.class
+udc/edu/ar/tp2_orm/resources/JakartaEE8Resource.class
+app/controllers/HomeController.class
+app/models/TipoUsuario.class

@@ -1,0 +1,66 @@
+:root{
+    --color-fondo: #F0EAD2;
+    --color-letras: #6C584C;
+    --color-borde: #A98467;
+    --color-th: #ADC178;
+    --color-tr-hover: #DDE5B6;
+    --color-button: #A98467;
+    --color-button-hover: #6C584C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-letras);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+    border: 1px solid var(--color-borde);
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla th {
+    background-color: var(--color-th);
+    font-weight: bold;
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla tr:hover {
+    background-color: var(--color-tr-hover);
+    transition: background-color 0.3s;
+}
+
+.button {
+    background-color: var(--color-button);
+    border: none;
+    color: #FFF;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background-color: var(--color-button-hover);
+    transition: background-color 0.3s;
+}
