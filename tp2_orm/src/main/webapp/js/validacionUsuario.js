@@ -1,35 +1,35 @@
+
+// Expresiones regulares para validar diferentes campos
 const rexNombreApellido = new RegExp("^[A-ZÑa-zñ ]{3,}$");
+const rexAlias = new RegExp("^[A-Za-z0-9_-]{3,}$");
+const rexContrasenia = new RegExp("^[A-Za-z0-9_-]{7,16}$");
+const rexEmail = new RegExp("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$");
+const rexCelular = new RegExp("^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{3,6}$");
+
+// Obtener referencias a elementos del DOM
 const inputNombre = document.getElementById('nombre');
 const inputApellido = document.getElementById('apellido');
 const mensajeNombre = document.getElementById('mensaje-nombre');
 const mensajeApellido = document.getElementById('mensaje-apellido');
 
-
-const rexAlias = new RegExp("^[A-Za-z0-9_-]{3,}$");
 const inputAlias = document.getElementById('alias');
 const mensajeAlias = document.getElementById('mensaje-alias');
 
-
-const rexContrasenia = new RegExp("^[A-Za-z0-9_-]{7,16}$");
 const inputContrasenia = document.getElementById('contrasenia');
 const mensajeContrasenia = document.getElementById('mensaje-contrasenia');
 
-
-const rexEmail = new RegExp("^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$");
 const inputEmail1 = document.getElementById('email_principal');
 const inputEmail2 = document.getElementById('email_secundario');
 const mensajeEmail1 = document.getElementById('mensaje-email1');
 const mensajeEmail2 = document.getElementById('mensaje-email2');
 
-
-const rexCelular = new RegExp("^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{3,6}$");
 const inputCelular = document.getElementById('numero_celular');
 const mensajeCelular = document.getElementById('mensaje-celular');
 
 const inputTipoUsuario = document.getElementById('tipo_usuario');
 const mensajeTipo = document.getElementById('mensaje-tipo');
 
-
+// Funcion para actualizar la apariencia de los inputs segun si son validos o no
 function actualizarInput(input,valor){
 
     if(valor){
@@ -51,6 +51,7 @@ function actualizarInput(input,valor){
     }
 }
 
+// Funcion para validar los datos del usuario
 function validarDatosUsuario(){
     let formularioValido = true;
 

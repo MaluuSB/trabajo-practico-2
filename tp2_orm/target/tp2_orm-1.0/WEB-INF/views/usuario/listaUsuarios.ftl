@@ -7,8 +7,8 @@
     <title>Lista de Usuarios</title>
     <script>
         function confirmarEliminacion(id) {
-            if (confirm('¿Está seguro de que desea eliminar este empleado?')) {
-                // Si el usuario hace clic en "Aceptar", redirige a la URL de eliminación
+            if (confirm('¿Esta seguro de borrar este Usuario?')) {
+                // Si el usuario hace clic en "Aceptar", redirige a la URL de "borrarUsuario"
                 window.location.href = "${context_path}/usuario/borrarUsuario/" + id;
             }
         }
